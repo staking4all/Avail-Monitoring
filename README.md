@@ -149,6 +149,11 @@ scrape_configs:
       - targets: ['localhost:9100']
 ```
 
+Restart Prometheus
+```
+systemctl start prometheus
+```
+
 ## Install Grafana
 
 Download and install
