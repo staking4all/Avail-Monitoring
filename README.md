@@ -43,6 +43,7 @@ sudo cp ./node_exporter-*.linux-amd64/node_exporter /usr/local/bin/
 
 Create additional directories needed
 ```
+cd ~
 sudo mkdir /etc/prometheus
 sudo mkdir /var/lib/prometheus
 ```
