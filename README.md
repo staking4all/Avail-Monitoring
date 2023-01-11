@@ -198,7 +198,7 @@ You will need to create a datasource. Navigate to the below.
 ![image](https://user-images.githubusercontent.com/61656547/211863151-59fa227f-a9d8-4835-b16d-83f8e6f2b628.png)
 
 
-You will need to setup the datasource as shown below
+You will need to setup the datasource as shown below. You only need to populate http://localhost:9090 in the URL field. Do a dave and test, ensure the test is green,
 ![image](https://user-images.githubusercontent.com/61656547/211848471-bd36c6d7-6f64-4a09-89f0-e90c767e63ab.png)
 
 Using the import you can import the Avail Dashbaord in this repo
