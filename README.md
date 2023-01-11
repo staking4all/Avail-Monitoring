@@ -1,6 +1,6 @@
 # Avail Monitoring
 
-The purpose of this repo is to assist validators or inidividuals who are running Avail Nodes that is part of the Polygon ecosystem 
+The purpose of this repo is to assist validators/inidividuals to monitor their own Avail node installation. Avail Nodes are part of the Polygon ecosystem. 
 
 In order to use this you need an Avail node already running. If your Avail node is running fine you will be able to see the metric endpoints when you execute the below
 ```
