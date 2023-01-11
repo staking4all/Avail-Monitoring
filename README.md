@@ -128,7 +128,7 @@ sudo systemctl daemon-reload && systemctl enable node_exporter && systemctl star
 
 Ensure the services are running fine before proceeding
 
-## Configure prometheus & Node Exporter
+## Configure Prometheus & Node Exporter
 
 Edit the configuration file
 ```
