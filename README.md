@@ -72,6 +72,39 @@ Now clean up
 cd .. && rm -rf prometheus* && rm -rf node_exporter*
 ```
 
+## Configure Prometheus & Node Exporter
+
+Edit the configuration file
+```
+sudo nano /etc/prometheus/prometheus.yml
+```
+
+Add the below in the file
+```
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  # - "first.rules"
+  # - "second.rules"
+
+scrape_configs:
+  - job_name: "prometheus"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9090"]
+  - job_name: "substrate_node"
+    scrape_interval: 5s
+    static_configs:
+      - targets: ["localhost:9615"]
+  - job_name: node
+    static_configs:
+      - targets: ['localhost:9100']
+```
+
+## Create systemd file to run as a background service
+
 Create a systemd file to start the prometheus service
 ```
 sudo nano /etc/systemd/system/prometheus.service
@@ -129,41 +162,7 @@ sudo systemctl daemon-reload && systemctl enable node_exporter && systemctl star
 
 Ensure the services are running fine before proceeding
 
-## Configure Prometheus & Node Exporter
 
-Edit the configuration file
-```
-sudo nano /etc/prometheus/prometheus.yml
-```
-
-Add the below in the file
-```
-global:
-  scrape_interval: 15s
-  evaluation_interval: 15s
-
-rule_files:
-  # - "first.rules"
-  # - "second.rules"
-
-scrape_configs:
-  - job_name: "prometheus"
-    scrape_interval: 5s
-    static_configs:
-      - targets: ["localhost:9090"]
-  - job_name: "substrate_node"
-    scrape_interval: 5s
-    static_configs:
-      - targets: ["localhost:9615"]
-  - job_name: node
-    static_configs:
-      - targets: ['localhost:9100']
-```
-
-Restart Prometheus
-```
-systemctl restart prometheus
-```
 
 ## Install Grafana
 
