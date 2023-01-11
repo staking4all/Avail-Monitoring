@@ -188,7 +188,7 @@ Remember if you installed on a remote machine (VPS) you need to update your fire
 sudo ufw allow 3000/tcp
 ```
 
-You should see Grafana log in page at http://SERVER_IP_ADDRESS:3000/login
+You should see the Grafana log in page at http://SERVER_IP_ADDRESS:3000/login
 ![image](https://user-images.githubusercontent.com/61656547/211862410-481b407d-e6ae-49ff-9d7c-4d9ab865c10d.png)
 
 You will be asked to reset your password, please write it down or remember the password as you will need it for the next login.
@@ -198,11 +198,11 @@ You will need to create a datasource. Navigate to the below.
 ![image](https://user-images.githubusercontent.com/61656547/211863151-59fa227f-a9d8-4835-b16d-83f8e6f2b628.png)
 
 
-You will need to setup the datasource as shown below. You only need to populate http://localhost:9090 in the URL field. Do a save and test, ensure the test is green.
+You will need to setup the datasource as shown below. You only need to populate http://localhost:9090 in the URL field. Do a save and test, ensure the test is successful (green).
 
 ![image](https://user-images.githubusercontent.com/61656547/211848471-bd36c6d7-6f64-4a09-89f0-e90c767e63ab.png)
 
-Using the import you can import the Avail Dashbaord in this repo
+Using the import function you can import the Avail Dashbaord available in this repo
 
 ![image](https://user-images.githubusercontent.com/61656547/211849069-7941363c-e0e9-48ad-9a5b-852f5c5f33cc.png)
 
