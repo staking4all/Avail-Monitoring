@@ -181,7 +181,7 @@ sudo systemctl start grafana-server
 
 ## Import Grafana Dashbaord
 
-You can now access it by going to the http://SERVER_IP_ADDRESS:3000/login. The default user and password is admin/admin.
+You can now access Grafana by going to the following url - http://SERVER_IP_ADDRESS:3000/login. The default user and password is admin/admin.
 
 Remember if you installed on a remote machine on a VPS you need to update your firewall rules to allow access to port 3000. The below is an example, would be best to limit the ip that can connect, the below allows anyone to connect. For exmaple adding the firewall on ubuntu
 ```
