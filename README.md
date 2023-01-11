@@ -2,6 +2,15 @@
 
 The purpose of this repo is to assist validators or inidividuals who are running Avail Nodes that is part of the Polygon ecosystem 
 
+In order to use this you need Avail node already running. If your Avail node is running fine you will be able to see the metric endpoints when you execute
+```
+curl localhost:9615/metrics
+```
+
+You should see metric values like this
+![image](https://user-images.githubusercontent.com/61656547/211852599-5546c7bb-01e2-4c65-b9e0-176c144829ff.png)
+
+Our objective is to collect this info, plus some additional metrics (cpu, ram, etc) from your local server and display all this info in a Grafana Dashboard
 
 ## Install Prometheus & Node Exporter Software
 
@@ -11,7 +20,7 @@ sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
 sudo useradd --no-create-home --shell /usr/sbin/nologin node_exporter
 ```
 
-Get the software needed and Extract
+Get the software needed and extract
 ```
 cd ~
 wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
@@ -20,7 +29,7 @@ wget https://github.com/prometheus/node_exporter/releases/download/v1.3.1/node_e
 tar xvf node_exporter-*.tar.gz
 ```
 
-Place the software in the correct place
+Place the software in the correct directories
 ```
 cd ~
 cd prometheus-*.linux-amd64
@@ -57,8 +66,7 @@ sudo chown -R prometheus:prometheus /etc/prometheus/console_libraries
 
 Now clean up
 ```
-cd .. && rm -rf prometheus*
-rm -rf node_exporter*
+cd .. && rm -rf prometheus* && rm -rf node_exporter*
 ```
 
 Create a systemd file to start the prometheus service
@@ -116,7 +124,7 @@ sudo systemctl daemon-reload && systemctl enable prometheus && systemctl start p
 sudo systemctl daemon-reload && systemctl enable node_exporter && systemctl start node_exporter
 ```
 
-Ensure the services are running fine
+Ensure the services are running fine before proceeding
 
 ## Configure prometheus & Node Exporter
 
