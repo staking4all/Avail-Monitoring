@@ -169,7 +169,7 @@ sudo systemctl enable grafana-server
 sudo systemctl start grafana-server
 ```
 
-## Import Dashbaord
+## Import Grafana Dashbaord
 
 You can now access it by going to the http://SERVER_IP_ADDRESS:3000/login. The default user and password is admin/admin.
 
@@ -183,7 +183,7 @@ Using the import you can import the Avail Dashbaord in this repo
 Import the dashboard
 ![image](https://user-images.githubusercontent.com/61656547/211849660-97ccd7cf-c03e-47a0-b977-79ed612a8246.png)
 
-You will then be able to display teh dashboard
+You will then be able to display the dashboard
 ![image](https://user-images.githubusercontent.com/61656547/211849996-fe6d3967-b081-45d9-86a3-be500d5ae66e.png)
 
 
