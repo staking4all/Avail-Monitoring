@@ -151,7 +151,7 @@ scrape_configs:
 
 Restart Prometheus
 ```
-systemctl start prometheus
+systemctl restart prometheus
 ```
 
 ## Install Grafana
