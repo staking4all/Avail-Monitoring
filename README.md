@@ -194,6 +194,7 @@ You should see Grafana log in page at http://SERVER_IP_ADDRESS:3000/login
 You will be asked to reset your password, please write it down or remember the password as you will need it for the next login.
 
 You will need to create a datasource. Navigate to the below.
+
 ![image](https://user-images.githubusercontent.com/61656547/211863151-59fa227f-a9d8-4835-b16d-83f8e6f2b628.png)
 
 
