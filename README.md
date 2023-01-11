@@ -10,19 +10,19 @@ curl localhost:9615/metrics
 You should see metric values like this
 ![image](https://user-images.githubusercontent.com/61656547/211852599-5546c7bb-01e2-4c65-b9e0-176c144829ff.png)
 
-Our objective is to collect this info, plus some additional metrics (cpu, ram, etc) from your local server and display all this info in a Grafana Dashboard
+Our objective is to collect this info, plus some additional metrics (cpu, ram, etc) from your local server and display all this info in a Grafana Dashboard.
 
 So lets get started.
 
 ## Install Prometheus & Node Exporter Software
 
-Create the users needed
+Create the below users
 ```
 sudo useradd --no-create-home --shell /usr/sbin/nologin prometheus
 sudo useradd --no-create-home --shell /usr/sbin/nologin node_exporter
 ```
 
-Get the software needed and extract
+Get and extract the software
 ```
 cd ~
 wget https://github.com/prometheus/prometheus/releases/download/v2.26.0/prometheus-2.26.0.linux-amd64.tar.gz
