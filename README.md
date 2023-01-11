@@ -183,6 +183,15 @@ sudo systemctl start grafana-server
 
 You can now access it by going to the http://SERVER_IP_ADDRESS:3000/login. The default user and password is admin/admin.
 
+Remember if you installed on a remote machine on a VPS you need to update your firewall rules to allow access to port 3000. The below is an example, would be best to limit the ip that can connect, the below allows anyone to connect. For exmaple adding the firewall on ubuntu
+```
+sudo ufw allow 3000/tcp
+```
+
+You should see Grafana log in page at http://SERVER_IP_ADDRESS:3000/login
+![image](https://user-images.githubusercontent.com/61656547/211862410-481b407d-e6ae-49ff-9d7c-4d9ab865c10d.png)
+
+
 You will need to setup the datasource as shown below
 ![image](https://user-images.githubusercontent.com/61656547/211848471-bd36c6d7-6f64-4a09-89f0-e90c767e63ab.png)
 
