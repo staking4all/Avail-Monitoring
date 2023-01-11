@@ -12,6 +12,8 @@ You should see metric values like this
 
 Our objective is to collect this info, plus some additional metrics (cpu, ram, etc) from your local server and display all this info in a Grafana Dashboard
 
+So lets get started.
+
 ## Install Prometheus & Node Exporter Software
 
 Create the users needed
